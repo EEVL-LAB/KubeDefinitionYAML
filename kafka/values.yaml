@@ -134,7 +134,7 @@ log4j: ""
 existingLog4jConfigMap: ""
 ## @param heapOpts Kafka Java Heap size
 ##
-heapOpts: -Xmx1024m -Xms1024m
+heapOpts: -Xmx2g -Xms2g
 ## @param deleteTopicEnable Switch to enable topic deletion or not
 ##
 deleteTopicEnable: true
@@ -793,7 +793,7 @@ externalAccess:
   service:
     ## @param externalAccess.service.type Kubernetes Service type for external access. It can be NodePort, LoadBalancer or ClusterIP
     ##
-    type: NodePort
+    type: LoadBalancer
     ## @param externalAccess.service.ports.external Kafka port used for external access when service type is LoadBalancer
     ##
     ports:
@@ -811,7 +811,10 @@ externalAccess:
     ##   - broker1.external.example.com
     ##   - broker2.external.example.com
     ##
-    loadBalancerNames: []
+    loadBalancerNames: 
+      - aaf468849f8a049cdad1e4fac615813d-779174101.ap-northeast-2.elb.amazonaws.com
+      - a980ff85dfcf84c44a147a837f20d397-1149970735.ap-northeast-2.elb.amazonaws.com
+      - a41af9ed8e742410f9f51d111e35040a-130931382.ap-northeast-2.elb.amazonaws.com
     ## @param externalAccess.service.loadBalancerAnnotations Array of load balancer annotations for each Kafka broker. Length must be the same as replicaCount
     ## e.g:
     ## loadBalancerAnnotations:
