@@ -1,0 +1,9 @@
+apiVersion: v1
+appVersion: 3.x
+description: A Helm chart for Kafdrop
+maintainers:
+- email: afausti@lsst.org
+  name: afausti
+  url: https://afausti.github.io/
+name: kafdrop
+version: 0.1.3

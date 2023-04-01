@@ -1,0 +1,65 @@
+replicaCount: 1
+
+image:
+  repository: obsidiandynamics/kafdrop
+  tag: 3.30.0
+  pullPolicy: IfNotPresent
+
+kafka:
+  brokerConnect: kafka-headless.kafka:9092
+  properties: ""
+  truststore: ""
+  keystore: ""
+  propertiesFile: "kafka.properties"
+  truststoreFile: "kafka.truststore.jks"
+  keystoreFile: "kafka.keystore.jks"
+
+host: kafka-jmx-metrics.kafka
+
+jvm:
+  opts: "-Xms32M -Xmx64M"
+jmx:
+  port: 5556
+
+nameOverride: ""
+fullnameOverride: ""
+
+cmdArgs: ""
+
+server:
+  port: 9000
+  servlet:
+    contextPath: /kafdrop
+
+service:
+  annotations: {}
+  type: ClusterIP
+  port: 9000
+
+ingress:
+  enabled: true
+  annotations: {}
+  path: /kafdrop
+  hosts: 
+    - a4942b89e69aa4eb2b05a784501a712b-1563476335.ap-northeast-2.elb.amazonaws.com
+  tls: []
+
+resources:
+  # limits:
+  #  cpu: 100m
+  #  memory: 128Mi
+  requests:
+    cpu: 1m
+    memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+podAnnotations: {}
+
+mountProtoDesc:
+  enabled: false
+  hostPath:
