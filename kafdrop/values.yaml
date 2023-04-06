@@ -41,7 +41,7 @@ ingress:
   annotations: {}
   path: /kafdrop
   hosts: 
-    - a4942b89e69aa4eb2b05a784501a712b-1563476335.ap-northeast-2.elb.amazonaws.com
+    - ad9e4ca2a27eb4362ab84066408a825e-1452527461.ap-northeast-2.elb.amazonaws.com
   tls: []
 
 resources:
