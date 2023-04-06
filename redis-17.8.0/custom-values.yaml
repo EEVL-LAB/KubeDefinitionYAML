@@ -114,7 +114,7 @@ architecture: replication
 auth:
   ## @param auth.enabled Enable password authentication
   ##
-  enabled: true
+  enabled: false
   ## @param auth.sentinel Enable password authentication on sentinels too
   ##
   sentinel: true
@@ -465,7 +465,7 @@ master:
   service:
     ## @param master.service.type Redis&reg; master service type
     ##
-    type: ClusterIP
+    type: LoadBalancer
     ## @param master.service.ports.redis Redis&reg; master service port
     ##
     ports:
@@ -879,7 +879,7 @@ replica:
   service:
     ## @param replica.service.type Redis&reg; replicas service type
     ##
-    type: ClusterIP
+    type: LoadBalancer
     ## @param replica.service.ports.redis Redis&reg; replicas service port
     ##
     ports:
@@ -1194,7 +1194,7 @@ sentinel:
   service:
     ## @param sentinel.service.type Redis&reg; Sentinel service type
     ##
-    type: ClusterIP
+    type: LoadBalancer
     ## @param sentinel.service.ports.redis Redis&reg; service port for Redis&reg;
     ## @param sentinel.service.ports.sentinel Redis&reg; service port for Redis&reg; Sentinel
     ##
@@ -1540,7 +1540,7 @@ metrics:
   service:
     ## @param metrics.service.type Redis&reg; exporter service type
     ##
-    type: ClusterIP
+    type: LoadBalancer
     ## @param metrics.service.port Redis&reg; exporter service port
     ##
     port: 9121
