@@ -1393,7 +1393,7 @@ dags:
 
     ## the git branch to check out
     ##
-    branch: master
+    branch: main
 
     ## the git revision (tag or hash) to check out
     ##
@@ -1922,7 +1922,7 @@ postgresql:
     ## if postgres will use Persistent Volume Claims to store data
     ## - [WARNING] if false, data will be LOST as postgres Pods restart
     ##
-    enabled: true
+    enabled: false
 
     ## the name of the StorageClass used by the PVC
     ##
