@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: scraping-svc
+spec:
+  type: LoadBalancer
+  selector:
+    app: scraping
+  ports:
+  - port: 8080
+    targetPort: 8080
