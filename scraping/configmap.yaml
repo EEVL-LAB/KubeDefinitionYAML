@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: scraping-config
 data:
-  KAFKA_BROKER_0: aaf468849f8a049cdad1e4fac615813d-779174101.ap-northeast-2.elb.amazonaws.com:9094
-  KAFKA_BROKER_1: a980ff85dfcf84c44a147a837f20d397-1149970735.ap-northeast-2.elb.amazonaws.com:9094
-  KAFKA_BROKER_2: a41af9ed8e742410f9f51d111e35040a-130931382.ap-northeast-2.elb.amazonaws.com:9094
+  KAFKA_BROKER_0: kafka-0-external.kafka:9094
+  KAFKA_BROKER_1: kafka-1-external.kafka:9094
+  KAFKA_BROKER_2: kafka-2-external.kafka:9094
