@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scraping
+spec:
+  selector:
+    matchLabels:
+      app: scraping
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: scraping
+    spec:
+      containers:
+      - name: scraping
+        imagePullPolicy: Always
+        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/scraping:0.1.2
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: scraping-config

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: scraping-config
+data:
+  KAFKA_BROKER_0: kafka-0-external.kafka:9094
+  KAFKA_BROKER_1: kafka-1-external.kafka:9094
+  KAFKA_BROKER_2: kafka-2-external.kafka:9094

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: consumer-config
+  namespace: scraping
+data:
+  KAFKA_HOST: kafka.kafka
+  KAFKA_HOST_0: kafka-0.kafka-headless.kafka.svc.cluster.local
+  KAFKA_HOST_1: kafka-1.kafka-headless.kafka.svc.cluster.local
+  KAFKA_HOST_2: kafka-2.kafka-headless.kafka.svc.cluster.local
+  KAFKA_TOPIC: scraping
+  KAFKA_OFFSET_RESET: earliest

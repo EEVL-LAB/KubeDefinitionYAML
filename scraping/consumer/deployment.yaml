@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consumer
+  namespace: scraping
+spec:
+  selector:
+    matchLabels:
+      app: consumer
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: consumer
+    spec:
+      containers:
+      - name: consumer
+        imagePullPolicy: Always
+        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/consumer:1.0.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        envFrom:
+          - configMapRef:
+              name: consumer-config
+          - secretRef:
+              name: consumer-secret
