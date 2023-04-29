@@ -619,7 +619,7 @@ scheduler:
   ## - `periodSeconds` x `failureThreshold` = max seconds a scheduler can be in an "unhealthy" state
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 10
     periodSeconds: 30
     timeoutSeconds: 60
@@ -1110,7 +1110,7 @@ triggerer:
   ## configs for the triggerer Pods' liveness probe
   ##
   livenessProbe:
-    enabled: true
+    enabled: false
     initialDelaySeconds: 10
     periodSeconds: 30
     timeoutSeconds: 60
