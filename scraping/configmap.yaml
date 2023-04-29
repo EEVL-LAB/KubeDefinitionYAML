@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: scraping-config
-data:
-  KAFKA_BROKER_0: kafka-0.kafka-headless.kafka.svc.cluster.local:9092
-  KAFKA_BROKER_1: kafka-1.kafka-headless.kafka.svc.cluster.local:9092
-  KAFKA_BROKER_2: kafka-2.kafka-headless.kafka.svc.cluster.local:9092
