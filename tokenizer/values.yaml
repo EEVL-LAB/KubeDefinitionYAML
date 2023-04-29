@@ -8,7 +8,7 @@ image:
   repository: keyog/sns-tokenizer-async
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "stable-mode"
+  tag: "stable-mode-230429"
 
 imagePullSecrets: []
 nameOverride: ""
