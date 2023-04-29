@@ -16,7 +16,7 @@ spec:
       containers:
       - name: consumer
         imagePullPolicy: Always
-        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/consumer:1.0.0
+        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/consumer:1.0.1
         resources:
           limits:
             memory: "128Mi"
