@@ -16,7 +16,7 @@ spec:
       containers:
       - name: scraping
         imagePullPolicy: Always
-        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/scraping:0.2.5
+        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/scraping:0.2.7
         resources:
           limits:
             memory: "128Mi"
