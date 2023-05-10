@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: scraping-svc
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: scraping
   ports:
