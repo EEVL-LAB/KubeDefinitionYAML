@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: related-keyword-extractor-config
+data:
+  REDIS_HOST: nodeport.eevl.studio
+  REDIS_PORT: "30224"
+  REDIS_DB_NUM: "1"

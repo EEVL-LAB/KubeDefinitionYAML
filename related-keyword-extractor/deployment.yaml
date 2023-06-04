@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: related-keyword-extractor
+  namespace: related-keyword-extractor
+spec:
+  selector:
+    matchLabels:
+      app: related-keyword-extractor
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: related-keyword-extractor
+    spec:
+      containers:
+      - name: related-keyword-extractor
+        imagePullPolicy: Always
+        image: 705373246515.dkr.ecr.ap-northeast-2.amazonaws.com/related-keyword-extractor:0.0.3
+        resources:
+          requests:
+            cpu: "128m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "256Mi"
+        ports:
+        - containerPort: 8080
+        envFrom:
+          - configMapRef:
+              name: related-keyword-extractor-config
